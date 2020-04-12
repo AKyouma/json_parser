@@ -1,4 +1,3 @@
-
 %{
 #include <stdlib.h>
 void yyerror(char *);
@@ -10,7 +9,7 @@ void yyerror(char *);
 INTEIRO [0-9]+
 FLOAT ([0-9]+[.][0-9]+)
 STRING (\"[^\"]*\")
-/*Mudei para incluir números, mas continuava com erros, então coloquei quaisquer caracteres, exceto aspas"*/
+/*Mudei para incluir números mas continuava com erros, então coloquei quaisquer caracteres, exceto aspas*/
 
 %%
 {INTEIRO} {return INTEIRO;}
@@ -25,6 +24,10 @@ STRING (\"[^\"]*\")
 [\t]* ;
 [\n]*;
 [[:space:]]* ;
+
+. {yyerror("");} ;
+
+ /*Não estava chamando a função de erro, logo alguns não davam que era INVALIDO*/
 
 %%
 

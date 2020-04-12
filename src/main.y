@@ -1,5 +1,3 @@
-
-
 %{
 #include <stdio.h>
   #include <stdlib.h>
@@ -45,6 +43,7 @@ VALOR:
 	|INTEIRO
 	|FLOAT
 	;
+
 
 %%
 
