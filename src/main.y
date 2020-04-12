@@ -5,6 +5,7 @@
   #include <stdlib.h>
 void yyerror(char *c);
 int yylex(void);
+
 %}
 
 %token ABRE_CH FECHA_CH VIRGULA ABRE FECHA DP STRING INTEIRO FLOAT
